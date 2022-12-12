@@ -22,7 +22,7 @@ pip install django-blockbee
 ```
 
 
-[on pypi](https://pypi.python.org/pypi/django-cryptapi)
+[on pypi](https://pypi.python.org/pypi/django-blockbee)
 or
 [on GitHub](https://github.com/blockbee-io/django-blockbee)
 
