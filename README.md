@@ -48,7 +48,7 @@ Collect static files:
 python3 manage.py collectstatic
 ```
 
-Add CryptAPI's URLs to your project's urls.py file:
+Add BlockBee's URLs to your project's urls.py file:
 
 ```python
 urlpatterns = [
@@ -208,7 +208,7 @@ In your template HTML
 
 ```djangotemplate
 {% extends 'base.html' %}
-{% load cryptapi_helper %}
+{% load blockbee_helper %}
 {% block content %}
     {% generate_payment_template %}
 {% endblock %}
@@ -231,7 +231,7 @@ This library has a couple of helpers to help you get started. They are present i
 
 ### BlockBee Helper
 
-This is the helper responsible for the connections ot the API itself. All these functions are in the ``cryptapi.py`` file. 
+This is the helper responsible for the connections ot the API itself. All these functions are in the ``blockbee.py`` file. 
 
 ``get_info(coin)`` returns the information of all cryptocurrencies or just if ``coin=''`` or a specific cryptocurrency if ``coin='ltc'`` for example. [docs](https://docs.blockbee.io/#operation/info)
 
@@ -280,4 +280,7 @@ Contact us @ https://blockbee.io/contacts/
 ### Changelog 
 
 #### 1.0.0
+* Initial Release
+
+#### 1.0.1
 * Initial Release
