@@ -27,13 +27,12 @@ function check_status(id) {
                 waiting_payment.addClass('done');
                 waiting_network.addClass('done');
                 jQuery('.blockbee_loader').remove();
-                jQuery('.blockbee_notification_refresh').remove();
-                jQuery('.blockbee_notification_cancel').remove();
+                jQuery('.blockbee_payment_notification').remove();
 
                 setTimeout(function () {
-                    jQuery('.blockbee_payments_wrapper').slideUp('400');
-                    jQuery('.blockbee_payment_processing').slideDown('400');
-                }, 5000);
+                    jQuery('.blockbee_payments_wrapper').slideUp('200');
+                    jQuery('.blockbee_payment_processing').slideDown('200');
+                }, 300);
             }
 
             if (data.data.is_paid === 1) {
@@ -41,14 +40,13 @@ function check_status(id) {
                 waiting_network.addClass('done');
                 payment_done.addClass('done');
                 jQuery('.blockbee_loader').remove();
-                jQuery('.blockbee_notification_refresh').remove();
-                jQuery('.blockbee_notification_cancel').remove();
+                jQuery('.blockbee_payment_notification').remove();
 
                 setTimeout(function () {
-                    jQuery('.blockbee_payments_wrapper').slideUp('400');
-                    jQuery('.blockbee_payment_processing').slideUp('400');
-                    jQuery('.blockbee_payment_confirmed').slideDown('400');
-                }, 5000);
+                    jQuery('.blockbee_payments_wrapper').slideUp('200');
+                    jQuery('.blockbee_payment_processing').slideUp('200');
+                    jQuery('.blockbee_payment_confirmed').slideDown('200');
+                }, 300);
 
                 is_paid = true;
             }
@@ -96,7 +94,7 @@ function check_status(id) {
             }
         });
 
-        setTimeout(status_loop, 5000);
+        setTimeout(status_loop, 2000);
     }
 
     status_loop();

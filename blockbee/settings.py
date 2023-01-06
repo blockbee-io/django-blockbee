@@ -2,7 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = '//CrypyAPI_TEST_KEY//'
+SECRET_KEY = '//BlockBee_TEST_KEY//'
 
 DEBUG = True
 
