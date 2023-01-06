@@ -283,4 +283,5 @@ Contact us @ https://blockbee.io/contacts/
 * Initial Release
 
 #### 1.0.1
-* Initial Release
+* Minor fixes
+* UI Improvements
