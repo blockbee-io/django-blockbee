@@ -285,3 +285,6 @@ Contact us @ https://blockbee.io/contacts/
 #### 1.0.1
 * Minor fixes
 * UI Improvements
+
+#### 1.0.2
+* Minor fixes
