@@ -1,5 +1,4 @@
 class CallbackDispatcher:
-
     def __init__(self, coin, request, payment, raw_data, result=None):
         self.coin = coin
         self._request = request
@@ -32,7 +31,7 @@ class CallbackDispatcher:
                     sender=self.__class__,
                     order_id=request.order_id,
                     payment=payment,
-                    value=self.payment['value_paid']
+                    value=self.payment['value_paid_coin']
                 )
 
                 request.status = 'pending'
@@ -45,12 +44,12 @@ class CallbackDispatcher:
                     sender=self.__class__,
                     order_id=request.order_id,
                     payment=payment,
-                    value=self.payment['value_paid']
+                    value=self.payment['value_paid_coin']
                 )
 
                 if request.status not in ['received', 'done']:
 
-                    total_received = self.payment['value_paid']
+                    total_received = self.payment['value_paid_coin']
 
                     if total_received < request.value_requested:
                         total_received = request.total_confirmed
@@ -105,6 +104,9 @@ class RequestDispatcher:
         from blockbee.utils import generate_nonce, build_callback_url
         from blockbee.forms import AddressCreatedForm
 
+        if self.apikey is None:
+            raise Exception('Please provide an API Key')
+
         try:
             provider = Provider.objects.get(coin=self.coin, active=True)
 
@@ -126,17 +128,9 @@ class RequestDispatcher:
                     'address': provider.cold_wallet,
                     'callback': cb_url,
                     'pending': 1,
+                    'apikey': self.apikey,
                     **params
                 }
-
-                if self.apikey is not None:
-                    _params = {
-                        'address': provider.cold_wallet,
-                        'callback': cb_url,
-                        'pending': 1,
-                        'apikey': self.apikey,
-                        **params
-                    }
 
                 response = get_address(self.coin, _params)
 

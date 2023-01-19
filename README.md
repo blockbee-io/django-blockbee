@@ -288,3 +288,8 @@ Contact us @ https://blockbee.io/contacts/
 
 #### 1.0.2
 * Minor fixes
+
+#### 1.0.3
+* Minor fixes
+* Signals now use the value_coin
+* Removed deprecated fields from the payment model
