@@ -4,6 +4,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '//BlockBee_TEST_KEY//'
 
+BLOCKBEE_API_KEY = '//BlockBee_API_KEY//'
+
 DEBUG = True
 
 INSTALLED_APPS = [

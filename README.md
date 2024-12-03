@@ -57,6 +57,14 @@ urlpatterns = [
 ]
 ```
 
+Add your BlockBee API Key (obtained from our [Dashboard](https://dash.blockbee.io/)).
+
+```python 
+
+BLOCKBEE_API_KEY = 'your_api_key'
+
+```
+
 ## Configuration
 
 After the installation you need to set up Providers for each coin you wish to accept.
@@ -295,4 +303,7 @@ Contact us @ https://blockbee.io/contacts/
 * Removed deprecated fields from the payment model
 
 #### 1.0.4
+* Minor fixes
+
+#### 1.0.5
 * Minor fixes

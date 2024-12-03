@@ -3,21 +3,14 @@
 
 from setuptools import setup, find_packages
 
-import blockbee
-
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-
     name='django-blockbee',
-
-    version=blockbee.__version__,
-
+    version='1.0.5',
     packages=find_packages(),
-
     author="BlockBee",
-
     author_email="info@blockbee.io",
     install_requires=[
         'django',
@@ -26,9 +19,7 @@ setup(
     description="Django implementation of BlockBee's payment gateway",
     long_description_content_type="text/markdown",
     long_description=long_description,
-
     include_package_data=True,
-
     url='https://github.com/blockbee-io/django-blockbee',
     classifiers=[
         "Programming Language :: Python",
@@ -40,8 +31,6 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
     ],
-
     license="MIT",
-
     zip_safe=False,
 )

@@ -18,8 +18,7 @@ def request(_r):
             request=_r,
             order_id=order_id,
             coin=coin,
-            value=value,
-            apikey=apikey  # Your API Key here
+            value=value
         )
 
         payment_address = invoice.request()

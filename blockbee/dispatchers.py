@@ -1,3 +1,5 @@
+from blockbee.apikey import apikey
+
 class CallbackDispatcher:
     def __init__(self, coin, request, payment, raw_data, result=None):
         self.coin = coin
@@ -7,10 +9,8 @@ class CallbackDispatcher:
         self.result = result
 
     def callback(self):
-
         from blockbee.models import Request, PaymentLog
         from blockbee.signals import payment_received, payment_complete, payment_pending
-        from blockbee.blockbee import get_address
 
         try:
             request = Request.objects.get(
@@ -89,8 +89,7 @@ class CallbackDispatcher:
 
 
 class RequestDispatcher:
-
-    def __init__(self, request, order_id, coin, value, apikey):
+    def __init__(self, request, order_id, coin, value):
         self._request = request
         self.order_id = order_id
         self.coin = coin
