@@ -310,3 +310,6 @@ Contact us @ https://blockbee.io/contacts/
 
 #### 1.0.6
 * Minor fixes
+
+#### 1.0.7
+* Minor fixes

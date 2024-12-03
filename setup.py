@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='django-blockbee',
-    version='1.0.6',
+    version='1.0.7',
     packages=find_packages(),
     author="BlockBee",
     author_email="info@blockbee.io",
