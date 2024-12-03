@@ -307,3 +307,6 @@ Contact us @ https://blockbee.io/contacts/
 
 #### 1.0.5
 * Minor fixes
+
+#### 1.0.6
+* Minor fixes
